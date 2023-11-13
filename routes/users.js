@@ -13,7 +13,7 @@ const router = express.Router();
 //     res.send('respond with a resource');
 // });
 
-router.get('/',cors.corsWithOptions,authenticate.verifyUser,authenticate.verifyAdmin,(req,res,next) =>{
+router.get('/',cors.corsWithOptions,(req,res,next) =>{
 User.find()
 .then(users => {
     res.statusCode = 200;
